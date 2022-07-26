@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login_style.css') }}">
+
+</head>
+<body>
+<header>
+	<a href="https://github.com/techbotgoku/" class="logo">Github</a>
+	<ul>
+		<li><a href="{{ url_for('home') }}" >Home</a></li>
+		<li><a href="{{ url_for('login') }}">Login</a></li>
+		<li><a href="#" class="active">Register</a></li>
+		<li style="opacity: 0.2;">Made by Gokul</li>
+	</ul>
+</header>
+<div class="box-form">
+	<div class="left" style='background-image: url("https://drive.google.com/uc?export=view&id=1YOjh-7Qs0WSUzAmwDF4gz9_qoZLufkiW");'>
+		<div class="overlay">
+		<h1 style='font-size: 5vmax;'>Oh! you are new here.</h1>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>Register</h5>
+		{% for message in get_flashed_messages() %}
+			<p style='color: crimson;'>{{message}}</p>
+		{%endfor%}	
+		<p>Enter credentials to register</p>
+		<form action="" method="POST" >
+		<div class="inputs">
+			<input type="text" name = "username" placeholder="username" minlength="4">
+			<br>
+			<input type="password" name = "userpass" placeholder="password" minlength="8">
+		</div>	
+			<br><br>
+			<br>
+			<button class="submit">Register</button>
+		</form>
+	</div>
+	
+</div>
+<!-- partial -->
+  
+</body>
+</html>

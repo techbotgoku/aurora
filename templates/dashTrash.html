@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<title>Trash</title>
+		<link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/dash_style.css') }}">
+	</head>
+	<body>
+		<header>
+			<a>Welcome {{username}}</a>
+			<ul>
+				<li><a href="/dash10?username={{username}}" >Top10</a></li>
+				<li><a href="/dashAll?username={{username}}">All</a></li>
+				<li><a href="/dashRead?username={{username}}">Read</a></li>
+				<li><a href="#" class="active_page">Trash</a></li>
+				<li>
+					<form action="/addtelefeed?type=dashTrash" method="POST">
+						<input type="text" placeholder="Channel/Data" name="value">
+					</form>
+				</li>
+				<li><a href="/logout" id="logout" class="active">Logout</a></li>
+			</ul>
+		</header>
+		<section class="heading">
+			<h2>Trash</h2>
+		</section>
+		<section class="feed">
+		<div class="container">
+			{% for feed in data %}
+				<div class="card" style="background: rgba(255, 37, 71, 0.5);">
+					<div class="content">
+						<div class="feed_head">
+							<h3>{{feed.feed_heading}}</h3>
+						</div>
+						<div class="feed_content">
+							<p>{{feed.feed_content}}<p>
+						</div>
+					</div>
+						<ul class="sci">
+							<li>
+								<a class="read" href="/updatestatus/{{feed.id}}?type=dashTrash">Restore</a>
+							</li>
+							<li>
+								<a class="trash" href="/deletepermfeed/{{feed.id}}?type=dashTrash">Remove</a>
+							</li>
+						</ul>
+					</div>
+			{%endfor%}
+		</div>
+	</section>
+
+
+
+		<script>
+			var coll = document.getElementsByClassName("load_active");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+  			coll[i].addEventListener("click", function() {
+
+  				this.classList.toggle("load_active");
+    			var content = this.nextElementSibling;
+			    if (content.style.display === "block") {
+      			content.style.display = "none";
+    			} else {
+      			content.style.display = "block";
+    			}
+  			});
+			}
+			</script>
+
+	</body>
+</html>

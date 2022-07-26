@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login_style.css') }}">
+
+</head>
+<body>
+<header>
+	<a href="https://github.com/techbotgoku/" class="logo">Github</a>
+	<ul>
+		<li><a href="{{ url_for('home') }}" >Home</a></li>
+		<li><a href="#" class="active">Login</a></li>
+		<li><a href="{{ url_for('register') }}">Register</a></li>
+		<li style="opacity: 0.2;">Made by Gokul</li>
+	</ul>
+</header>
+<div class="box-form">
+	<div class="left" style='background-image: url("https://drive.google.com/uc?export=view&id=1N9KOVdRGbJ8YcF_P90TcfkAn_t4PyndG");'>
+		<div class="overlay">
+		<h1>Hello There.</h1>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>Login</h5>
+		{% for message in get_flashed_messages() %}
+			<p style='color: crimson;'>{{message}}</p>
+		{%endfor%}	
+		<p>Enter credentials to access feed</p>
+		<form action="" method="POST" >
+		<div class="inputs">
+			<input type="text" name = "username" placeholder="username" minlength="4">
+			<br>
+			<input type="password" name = "userpass" placeholder="password" minlength="8">
+		</div>	
+			<br><br>
+		<p>Don't have an account? <a href="{{ url_for('register') }}">Create Your Account</a> it takes less than a minute</p>
+			<br>
+			<button class="login">Login</button>
+		</form>
+	</div>
+	
+</div>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+
+		<title>Gokul Homepage</title>
+		<link rel = "stylesheet" type="text/css" href="index_style.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='CSS/index_style.css') }}">
+	</head>
+	<body>
+		<header>
+			<a href="https://github.com/techbotgoku/" class="logo">Github</a>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="{{ url_for('login') }}">Login</a></li>
+				<li><a href="{{ url_for('register') }}">Register</a></li>
+				<li style="opacity: 0.2;">Made by Gokul</li>
+			</ul>
+		</header>
+		<section>
+			<img src="https://drive.google.com/uc?export=view&id=1C0oBKDNQTnd_vUfhXEhRVGLZ2g2G4Ykt" id="sky">
+			<img src="https://drive.google.com/uc?export=view&id=1MkdmvQ1fI8vLvd_JN5QPoJ3A_Vf6pzoD" id="mountains">
+			<h2 id="text">aurora</h2>
+			<a href="{{ url_for('login') }}" id="btn">Login</a>
+			<img src="https://drive.google.com/uc?export=view&id=18i8bslOZnjhQhPj7OnMvjeQyzfXO42My" id="trees">
+		</section>
+		<div class = "sec">
+			<p>Made by Gokul (@techbotgoku)</p>
+		</div>
+
+
+		<script type="text/javascript">
+			let sky = document.getElementById('sky');
+			let mountains = document.getElementById('mountains');
+			let trees = document.getElementById('trees');
+			let text = document.getElementById('text');
+			let btn = document.getElementById('btn');
+			let header = document.querySelector('header');
+			window.addEventListener('scroll',function(){
+				let value = window.scrollY;
+				sky.style.left = value + 1+'px';
+				mountains.style.bottom = value * 500+'px';
+				trees.style.top = value +0+'px';
+				text.style.marginTop =  value +10+ 'px'; 
+				btn.style.marginTop =  value +1.5+ 'px'; 
+			})
+		</script>
+	</body>
+</html>

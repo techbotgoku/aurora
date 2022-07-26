@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu&display=swap');
+*
+{
+	margin : 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Mono', monospace;
+	max-width: 100%;
+}
+body
+{
+	min-height: 100vh;
+	background: rgba(255, 125, 0, 0.75);
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10000;
+}
+header .logo
+{
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 20px;
+}
+header ul li a
+{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #fff;
+	border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+	background: #fff;
+	color: #2b1055;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+
+}
+section img#sky
+{
+	mix-blend-mode: screen;
+}
+section img#trees
+{
+	z-index: 10;
+}
+#text{
+	font-family: 'Ubuntu', sans-serif;
+	position: absolute;
+	color: #001E57;
+	white-space: nowrap;
+	font-size: 12vw;	
+	z-index: 9;
+	transform: translateY(300px);
+
+}
+
+#btn
+{
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 30px;
+	border-radius: 40px;
+	background: #4C78CB;
+	color: #fff;
+	font-size: 1.5em;
+	z-index: 9;
+	transform: translateY(450px);
+}
+#btn:hover
+{
+	background: #fff;
+	color: #2b1055;
+}
+
+.sec
+{
+	position: relative;
+	padding: 100px;
+	background: transparent;
+	transform: translateY(400px);
+}
+
+.sec h2
+{
+	font-size: 3.5em;
+	margin-botton: 10 px;
+	color: #fff;
+}
+
+.sec p
+{
+	font-size: 1em;
+	text-align: center;
+	margin-botton: 10 px;
+	color: rgba(100, 100, 100, 0.5);
+	transform: translateY(-590px);
+}
+
+
+
+
+
+
+
+
+
