@@ -4,7 +4,7 @@ This project was done by Gokul Naidu Vuppalapati and was named Aurora which mean
 
 The whole project was done in under 20hrs, out of which the flask part took the least(~2-3hrs) and designing the website took the most <br/><br/>
 
-This is a webapp completly built using Python,Flask, SQLalchemy, Docker and Telegram API to display the feed dashboard(same for all users) in a very interactable and user friendly manner <br /><br />
+Aurora, a web app completely built using Python, Flask, SQLalchemy, HTML, CSS, Javascript, Docker and Telegram API to display the feed dashboard(same for all users) in a very intractable and user friendly manner similar to a notice board where all the team can collaborate and share ideas directly via the web app or just send a message to the telegram channel and it'll be automatically added to the dash.r <br /><br />
 
 New things learnt during process:
 - used illustrator for the first time and used to extract vertor images to create layers in HTML
